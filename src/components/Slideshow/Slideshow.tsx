@@ -32,6 +32,10 @@ const Slideshow = ({pictures}: SlideshowProps) => {
             )}
 
             <img src={pictures[index]} alt={`Slide ${index}`}/>
+            {pictures.length > 1 && (
+                <span className="slideshow-counter">{index + 1}/{pictures.length}</span>
+            )}
+
 
             {pictures.length > 1 && (
                 <ArrowSVG direction="next" onClick={() => handleClick('next')}/>
