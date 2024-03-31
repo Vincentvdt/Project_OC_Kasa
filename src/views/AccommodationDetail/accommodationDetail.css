@@ -158,5 +158,11 @@
   flex-direction: column;
   gap: 20px;
 }
+@media (min-width: 1440px) {
+  .accommodation-drodpowns {
+    flex-direction: row;
+    gap: 76px;
+  }
+}
 
 /*# sourceMappingURL=accommodationDetail.css.map */
