@@ -2,6 +2,14 @@
   width: 100%;
   display: block;
 
+  .mask {
+    overflow: hidden;
+    transform-origin: top;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+  }
+
+
   &-btn {
     display: flex;
     min-height: 30px;
@@ -15,6 +23,7 @@
     font-size: 13px;
     font-weight: 700;
     cursor: pointer;
+
     @media (min-width: 1440px) {
       font-size: 24px;
       padding: 11px 15px;
@@ -37,6 +46,11 @@
     align-self: stretch;
     border-radius: 5px;
     background: rgba(246, 246, 246, 0.45);
+    transform-origin: top;
+    transition: transform .3s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: .01s;
+    transform: translateY(-100%);
+
 
     p, ul, a {
       padding: 0;
@@ -57,6 +71,17 @@
 }
 
 .dropdown.active {
+
+  .mask {
+    overflow: hidden;
+    transform-origin: top;
+    max-height: 110px;
+  }
+
+  .dropdown-option {
+    transform: translateY(0);
+  }
+
   svg {
     transform: rotate(-180deg);
   }

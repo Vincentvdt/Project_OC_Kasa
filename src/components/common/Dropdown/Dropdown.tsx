@@ -23,11 +23,11 @@ const Dropdown = ({title, children}: DropdownProps) => {
                 {title}
                 <ArrowIcon/>
             </div>
-            {isCollapse && (
+            <div className="mask">
                 <div className="dropdown-option">
                     {children}
                 </div>
-            )}
+            </div>
         </div>
     );
 };
