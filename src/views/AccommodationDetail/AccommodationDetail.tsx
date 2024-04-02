@@ -46,8 +46,8 @@ const AccommodationDetail = () => {
                             </div>
                             <div className="accommodation-tags">
                                 {
-                                    accommodation.tags.map(tag => (
-                                        <div>
+                                    accommodation.tags.map((tag, index) => (
+                                        <div key={index}>
                                             {tag}
                                         </div>
                                     ))
@@ -82,7 +82,7 @@ const AccommodationDetail = () => {
                         </Dropdown>
                         <Dropdown title="Équipements">
                             <ul>
-                                {accommodation.equipments.map(equipement => <li>{equipement}</li>)}
+                                {accommodation.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}
                             </ul>
                         </Dropdown>
                     </div>

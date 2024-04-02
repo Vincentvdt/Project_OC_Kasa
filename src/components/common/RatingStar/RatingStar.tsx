@@ -23,8 +23,8 @@ const RatingStar = ({rating}: RatingStarProps) => {
     ));
     return (
         <>
-            {stars.map(star => (
-                <>{star}</>
+            {stars.map((star, index) => (
+                <span key={index}>{star}</span>
             ))}
         </>
     );
